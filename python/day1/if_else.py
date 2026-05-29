@@ -10,4 +10,12 @@ def fizzbuss():
         print("nothing")
 
 def watermelon_probem ():
-    
+    w=int(input("enter the weight of watermelon: "))
+    if w%2==0 and w>2:
+        x=w//2
+        if x%2==0:
+            print(x,x)
+        else:
+            print(x-1,x+1)
+    else:
+        print("NO")
