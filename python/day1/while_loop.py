@@ -63,5 +63,41 @@ def magic_number():
         print("magic number")
     else:
         print("not a magic number")
-magic_number()
-        
+# magic_number()
+
+#Strong numbers 
+def strong(n):
+    sum=0
+    temp=n
+    while temp>0:
+        fact=1
+        digits=temp%10
+        for i in range(1,digits+1):
+            fact=fact*i
+        sum=sum+fact
+        temp=temp//10
+    if sum==n:
+        print("it is a strong number")
+    else:
+        print("not a strong number")
+# strong(int(input("enter the number:")))
+
+
+ #antropic codee     
+
+def antropic():
+    n=int(input("enter the number:"))
+    n_square=n**2
+    count=1
+    temp=n
+    while n>0:
+        n=n//10
+        count*=10
+    dc=n_square%count
+    if dc==temp:
+        print("auntorpic number")
+    else:
+        print("not an auntopic number")
+antropic()
+#count of binary bits 
+
