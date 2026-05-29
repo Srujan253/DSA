@@ -19,3 +19,12 @@ def watermelon_probem ():
             print(x-1,x+1)
     else:
         print("NO")
+
+def elephant_step():
+    num=int(input("tell where elephant want to go :"))
+    if num%5==0:
+        print("number of step required is :",num//5)
+    else:
+        
+        print("numbeer of step required is :",num//5+1)
+elephant_step()
