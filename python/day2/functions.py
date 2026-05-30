@@ -32,9 +32,11 @@ def perfect_square(start,n):
 # perfect_square(2,35)
 
 def power_of_two(a,b):
+    if b==0:
+        return 1
     if b!=1:
         return a*power_of_two(a,b-1)
         
     return a
-print(power_of_two(2,5))
+print(power_of_two(2,6))
 
