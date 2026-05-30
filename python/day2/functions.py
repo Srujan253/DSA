@@ -47,6 +47,6 @@ def reduce_number(n):
         else:
 
             return 1+min(reduce_number(n+1),reduce_number(n-1))
-    return 0
-# print(reduce_number(15))
+    return 
+print(reduce_number(15))
     
