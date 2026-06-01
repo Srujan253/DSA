@@ -38,4 +38,16 @@ def most_frequent(ls):
     print(count_dict)
     return sec_ele
     
-print(most_frequent(ls))
+# print(most_frequent(ls))
+
+def longest_harmony(ls):
+    d={}
+    max_count=0
+    for i in ls:
+        d[i]=d.get(i,0)+1
+    for i in d:
+      if i+1 in d:
+          max_count=max(max_count,d[i]+d[i+1])
+    return max_count
+print(longest_harmony(ls))
+            
