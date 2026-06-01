@@ -15,6 +15,8 @@ def running_sum(ls):
 
 #lemonode changeee
 def change_verification(ls):
+    
+    
     five=0
     ten=0
     for i in ls:
@@ -73,26 +75,4 @@ def remove_element(nums,val):
 # print(remove_element(ls,val))
 # print(ls)
 
-#second largest 
-def second_largest(ls):
-    largest=ls[0]
-    second=0
-    for i in range(1,len(ls)):
-        if ls[i]>largest:
-            second=largest
-            largest=ls[i]
-        elif ls[i]>second and ls[i]!=largest:
-            second=ls[i]
-    return second
-# print(second_largest(ls))
 
-def reverse_list(ls):
-    idx=len(ls)-1
-    for i in range(len(ls)//2): 
-        temp=ls[i]
-        ls[i]=ls[idx]
-        ls[idx]=temp
-        idx-=1
-    print(ls)           
-        
-reverse_list(ls)
