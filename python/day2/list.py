@@ -56,12 +56,29 @@ def num_sum(ls):
 
 #lemonade leetcode problem
 def change_verification(ls):
-    change=0
-    
+    five=0
+    ten=0
     for i in ls:
-        if change<i:
-            print("false no change")
-            break
-        if 
+        if i==5:
+            five+=1
+        elif i==10 and five>0:
+            five-=1
+            ten+=1
+        elif i==20:
+            if five>2:
+                five-=3
+            elif five>0 and ten>0:
+                five-=1
+                ten-=1
+            else:
+                return False
+        else:
+            return False
+    return True
+
+      
+  
+print(change_verification(ls))
+        
 
 
