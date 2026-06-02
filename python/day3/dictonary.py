@@ -50,4 +50,6 @@ def longest_harmony(ls):
           max_count=max(max_count,d[i]+d[i+1])
     return max_count
 print(longest_harmony(ls))
+
+
             
