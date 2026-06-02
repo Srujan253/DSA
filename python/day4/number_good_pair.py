@@ -1,3 +1,6 @@
+from pyparsing import nums
+
+
 ls=list(map(int,input("enter the elements:").split()))
 #good pairs problem
 def good_pairs(nums):
@@ -31,5 +34,23 @@ def mac_ele(nums):
         
 #degree of an array
 def degreee_of_array(ls):
-    degree=0
+    d={}
+    s={}
+    l={}
+    for index,i in enumerate(nums):
+        d[i]=d.get(i,0)+1
+        if i not in s:
+            s[i]=index
+        l[i]=index
+    minimum=99999
+    degree=max(d.values())
+    for i in d:
+        if d[i]==degree:
+            temp=l[i]-s[i]+1
+            if temp<minimum:
+                minimum=temp
+    return minimum
+
+        
+        
     
