@@ -25,7 +25,16 @@ def converstion_lower(s):
         lower_s=lower_s+text
     print(lower_s)
 
-converstion_upper("Neha__")
-converstion_lower("Neha__")
+# converstion_upper("Neha__")
+# converstion_lower("Neha__")
+ 
 
+def count_of_value(s):
+    count=0
+    oval="aeiou"
+    for ch in s:
+        if ch in oval:
+            count+=1
+    print(count)
+count_of_value("aeious")
 
