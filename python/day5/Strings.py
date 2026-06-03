@@ -31,10 +31,38 @@ def converstion_lower(s):
 
 def count_of_value(s):
     count=0
-    oval="aeiou"
+    vowel="aeiouAEIOU"
     for ch in s:
-        if ch in oval:
+        if ch in vowel:
             count+=1
     print(count)
-count_of_value("aeious")
+# count_of_value("aeious")
 
+def reverse_stringz(s):
+    new_string=""
+
+    for i in range(len(s)):
+        
+        new_string=s[i]+new_string
+    print(new_string)
+# reverse_stringz("Neha")
+def reverse_string_spl(s):
+    
+    lst_s=list(s)
+    start=0
+    last=len(lst_s)-1
+    while start<last:
+        if lst_s[start].isalpha() and lst_s[last].isalpha():
+            lst_s[start], lst_s[last] = lst_s[last], lst_s[start]
+            start += 1
+            last -= 1
+        elif not lst_s[start].isalpha():
+            start += 1
+        else:
+            last-=1
+    new_string="".join(lst_s)
+    print(new_string)
+        
+
+
+reverse_string_spl("n*eha*")
