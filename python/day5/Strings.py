@@ -65,4 +65,23 @@ def reverse_string_spl(s):
         
 
 
-reverse_string_spl("n*eha*")
+# reverse_string_spl("n*eha*")
+def vowel_change(s):
+    new_ls=list(s)
+    i=0
+    j=len(new_ls)-1
+    vowel="aeiouAEIOU"
+    while i<j:
+        if new_ls[i] not in vowel:
+            i+=1
+        elif new_ls[j] not in vowel:
+            j-=1
+        else:
+            new_ls[i],new_ls[j]=new_ls[j],new_ls[i]
+            i+=1
+            j-=1
+    return "".join(new_ls)
+print(vowel_change("abcdefghijkl"))
+
+def 
+        
