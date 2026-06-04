@@ -11,5 +11,5 @@ def goat_latin(s):
         else:
             res.append(word[1:]+word[0]+"ma"+"a"*count)
             count+=1
-    return "".join(res)
+    return " ".join(res)
 print(goat_latin("spoorthi is upcoming hackthon winner"))
