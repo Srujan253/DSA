@@ -83,5 +83,4 @@ def vowel_change(s):
     return "".join(new_ls)
 print(vowel_change("abcdefghijkl"))
 
-def 
         
