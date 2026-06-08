@@ -1,0 +1,2 @@
+def ticket(student,sandwiches):
+    
