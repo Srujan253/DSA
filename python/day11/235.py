@@ -26,3 +26,4 @@ root.left.right=Node(6)
 root.right.left=Node(15)
 root.right.right=Node(30)
 print(shortes_num(root,2,8))
+#nothing done
