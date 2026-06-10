@@ -6,6 +6,7 @@ class Node:
         self.data=data
         self.left=None
         self.right=None
+        self.level=-1
 def inOrder(root):
     if root is not None:
         inOrder(root.left)
@@ -43,11 +44,33 @@ def sum_of_nodes(root):
     
 def height_of_tree(root):
     if root is None:
-        return 0
+        return -1
+    
+    return max(height_of_tree(root.left),height_of_tree(root.right))+1
+
+#top view of the tree
+def top_view(root):
+    if root is None:
+        return root
     d={}
-    que=[]
-    que.append(root)
-    d[root]=1
+    que=[root]
+    root.level=0
+    while que:
+        curr=que.pop(0)
+        if curr.level not in d:
+            d[curr.level]=curr.data
+        if curr.left:
+            curr.left.level=curr.level-1
+            que.append(curr.left)
+        if curr.right:
+            curr.right.level=curr.level+1
+            que.append(curr.right)
+    for i in d:
+        print(d[i],end=" ")
+    
+
+
+    
     
 
     
@@ -61,6 +84,7 @@ root.left.left=Node(2)
 root.left.right=Node(8)
 root.right.left=Node(15)
 root.right.right=Node(30)
+root.left.left.left=Node(1)
 # print("INORDERRRRRR")
 # inOrder(root)
 # print()
@@ -74,3 +98,5 @@ root.right.right=Node(30)
 # level_order(root)
 
 print("Sum of nodes are :",sum_of_nodes(root))
+
+print("height of the tree :",height_of_tree(root))
